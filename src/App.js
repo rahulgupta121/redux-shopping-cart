@@ -1,15 +1,20 @@
 import Navbar from './components/common/Navbar';
 import logo from './logo.svg';
-import { Router, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Test from './components/test';
 function App() {
   return (
     <>
-      {/* <h1 className="text-5xl font-bold underline">
-      Hello world!
-    </h1> */}
+    <BrowserRouter>
     <Navbar />
-        <Test />
+    <Routes>
+    
+      <Route exact path='/test' element={<Test />}/>
+      {/* <Route exact path="/" element={<ProductCard />} />
+          <Route path="/cart" element={<CartPage />} /> */}
+
+    </Routes>
+    </BrowserRouter>
     </>
   );
 }
