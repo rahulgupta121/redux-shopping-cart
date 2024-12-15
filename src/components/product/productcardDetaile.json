@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "cardImg": "https://mdbootstrap.com/img/new/standard/nature/184.webp" ,
+        "cardHeading": "Potato Chips",
+        "price": 23,
+        "cardDetaile": "Its very teasty"
+    },
+    {
+        "id": 2,
+        "cardImg": "https://mdbootstrap.com/img/new/standard/nature/183.webp" ,
+        "cardHeading": "Banana Chips",
+        "price": 8,
+        "cardDetaile": "Its very teasty"
+    },
+    {
+        "id": 3,
+        "cardImg": "https://mdbootstrap.com/img/new/standard/nature/183.webp" ,
+        "cardHeading": "Kopaki Chips",
+        "price": 5,
+        "cardDetaile": "Its very teasty"
+    },
+    {
+        "id": 4,
+        "cardImg": "https://mdbootstrap.com/img/new/standard/nature/184.webp" ,
+        "cardHeading": "Chinesses Chips",
+        "price": 6,
+        "cardDetaile": "Its very teasty"
+    },
+    {
+        "id": 5,
+        "cardImg": "https://mdbootstrap.com/img/new/standard/nature/184.webp" ,
+        "cardHeading": "Americano Chips",
+        "price": 6,
+        "cardDetaile": "Its very teasty"
+    }
+]

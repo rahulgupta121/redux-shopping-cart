@@ -13,10 +13,10 @@ import {
 const Navbar = () => {
   return (
     <>
-       <MDBNavbar light bgColor='light'>
-      <MDBContainer fluid>
+       <MDBNavbar light bgColor='light justify-content-between'>
+      <MDBContainer fluid className=''>
         <MDBNavbarBrand>Redux ECom Cart</MDBNavbarBrand>
-        <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
+        <MDBInputGroup tag="form" className='d-flex spa w-auto mb-3 justify-content-between'>
         <span>
           <Link to="/">All Product </Link>
         </span>
