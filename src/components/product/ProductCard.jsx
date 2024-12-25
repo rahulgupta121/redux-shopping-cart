@@ -10,22 +10,25 @@ import {
   MDBCol,
   MDBContainer,
 } from "mdb-react-ui-kit";
-import CardDetaile from "./productcardDetaile.json";
+import { useSelector } from "react-redux";
+// import CardDetaile from "rea";
 const ProductCard = () => {
+  const itemsDetailes = useSelector((state)=> state.allCart.items)
+  console.log(itemsDetailes.items)
   return (
     <div>
       <MDBContainer>
         <MDBRow>
-          {CardDetaile &&
-            CardDetaile.map((value, key) => {
+          {
+            itemsDetailes.map((value, key) => {
               return (
                 <MDBCol md="4">
                   <MDBCard key={value.id}>
                     <MDBCardImage src={value.img} position="top" alt="..." />
                     <MDBCardBody>
                       <MDBCardTitle>{value.title}</MDBCardTitle>
-                      <MDBCardText>{value.price}</MDBCardText>
-                      <MDBBtn href="#">Button</MDBBtn>
+                      <MDBCardText>$ {value.price}</MDBCardText>
+                      <MDBBtn href="#">ADD TO CART</MDBBtn>
                     </MDBCardBody>
                   </MDBCard>
                 </MDBCol>
