@@ -10,25 +10,28 @@ import {
   MDBCol,
   MDBContainer,
 } from "mdb-react-ui-kit";
-import { useSelector } from "react-redux";
-// import CardDetaile from "rea";
+import { useDispatch, useSelector } from "react-redux";
+import {addToCart} from "../../features/cartSlice";
 const ProductCard = () => {
-  const itemsDetailes = useSelector((state)=> state.allCart.items)
-  console.log(itemsDetailes.items)
+  const itemsDetailes = useSelector((state)=> state.allCart.items);
+  console.log(itemsDetailes)
+  const dispatch = useDispatch();
+  
   return (
     <div>
       <MDBContainer>
         <MDBRow>
-          {
-            itemsDetailes.map((value, key) => {
+          { itemsDetailes &&
+            itemsDetailes.map((item) => {
               return (
                 <MDBCol md="4">
-                  <MDBCard key={value.id}>
-                    <MDBCardImage src={value.img} position="top" alt="..." />
+                  <MDBCard key={item.id}>
+                    <MDBCardImage src={item.img} position="top" alt="..." />
                     <MDBCardBody>
-                      <MDBCardTitle>{value.title}</MDBCardTitle>
-                      <MDBCardText>$ {value.price}</MDBCardText>
-                      <MDBBtn href="#">ADD TO CART</MDBBtn>
+                      <MDBCardTitle>{item.title}</MDBCardTitle>
+                      <MDBCardText>$ {item.price}</MDBCardText>
+                      {/* <MDBBtn onClick={()=> dispatch(addToCart(item))}>ADD TO CART</MDBBtn> */}
+                      <MDBBtn onClick={() => dispatch(addToCart(item))}>ADD TO CART</MDBBtn>
                     </MDBCardBody>
                   </MDBCard>
                 </MDBCol>
